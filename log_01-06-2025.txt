@@ -1,0 +1,508 @@
+Mon 01/06/2025 15:54:25.72  
+---------------------------------------------------------------------------------------------------------------  
+Disk Model and Serial Number of all drives installed on the system:  
+---------------------------------------------------------------------------------------------------------------  
+Model                        SerialNumber  
+SanDisk X400 M.2 2280 512GB  1711AD802758  
+General UDisk USB Device                   
+  
+---------------------------------------------------------------------------------------------------------------  
+Disk Size and Free Space  
+---------------------------------------------------------------------------------------------------------------  
+ 
+C: free=229.18 GB size=475.84 GB
+ 
+D: free=0.92 GB size=0.94 GB
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Available Drives on the System:  
+---------------------------------------------------------------------------------------------------------------  
+Caption  VolumeName  
+C:                   
+D:                   
+  
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 15:54:46.63 Getting Latest SMART status for Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+SMART Status for Drive "d: Passed
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 15:54:46.79 Performing quick SMART test on Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+smartctl 7.4 2023-08-01 r5530 [x86_64-w64-mingw32-w10-22H2] (sf-7.4-1)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF OFFLINE IMMEDIATE AND SELF-TEST SECTION ===
+Sending command: "Execute SMART Short self-test routine immediately in off-line mode".
+Drive command "Execute SMART Short self-test routine immediately in off-line mode" successful.
+Testing has begun.
+Please wait 2 minutes for test to complete.
+Test will complete after Mon Jan 06 15:56:46 2025 CST
+Use smartctl -X to abort test.
+waiting 60 seconds to poll status again  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 15:56:46.28 Performing full format of drive "d:" using command "FORMAT d: /FS:NTFS /P:1 /X"  
+"/FS:NTFS" -- Formatting file system as NTFS  
+"/P:1" --  Zero every sector on the volume.  After that, the volume will be overwritten "1" times using a different random number each time.  
+"/X" -- Forces the volume to dismount first if necessary.  
+---------------------------------------------------------------------------------------------------------------  
+  
+  
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:02:30.16 Copying 100,000 copies of file ""C:\video\movie.exe"" to disk "d:" or until the drive is full whichever occurs first  
+---------------------------------------------------------------------------------------------------------------  
+  
+Mon 01/06/2025 16:02:30.16 Processing file number 1 on Drive "d:"  
+Free Space="989306880" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 2 on Drive "d:"  
+Free Space="832552960" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 3 on Drive "d:"  
+Free Space="675799040" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 4 on Drive "d:"  
+Free Space="519045120" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 5 on Drive "d:"  
+Free Space="362291200" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 6 on Drive "d:"  
+Free Space="205537280" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Mon 01/06/2025 16:02:30.16 Processing file number 7 on Drive "d:"  
+Free Space="48783360" Bytes Remaining...  
+Movie Size="156750742" Bytes  
+Not enough free space on disk d for movie-7.mkv  
+Copy process is complete.....  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:04:46.36 Getting Latest SMART status for Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+SMART Status for Drive "d: Passed
+Mon 01/06/2025 16:04:46.51 Performing CRC Check of files copied to Drive "d:"  
+command is exf -c "C:\Users\Test User\Desktop\results_01-06-2025.md5" -mt 16 -d "d:\"  
+No errors.
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:06:48.62 Getting Latest SMART status for Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:06:49.02 Performing full Check Disk of d using commnd chkdsk d: /f /r /x  
+"/F" -- Fixes errors on the disk.  
+"/R" -- Locates bad sectors and recovers readable information  
+"/X" -- Forces the volume to dismount first if necessary.  
+---------------------------------------------------------------------------------------------------------------  
+  
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:07:56.47 Getting Latest SMART status for Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+SMART Status for Drive "d: Passed
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:07:56.64 Performing quick format of drive "d:" using command "FORMAT d: /FS:NTFS /Q"  
+"/FS:NTFS" -- Formatting file system as NTFS  
+"/Q" --  Quick Format  
+---------------------------------------------------------------------------------------------------------------  
+  
+  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:09:11.62 Performing Extended SMART test on Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+waiting 60 seconds to poll status again  
+  
+---------------------------------------------------------------------------------------------------------------  
+Mon 01/06/2025 16:19:11.28 Current SMART attributes for Drive "d:"  
+---------------------------------------------------------------------------------------------------------------  
+  
+smartctl 7.4 2023-08-01 r5530 [x86_64-w64-mingw32-w10-22H2] (sf-7.4-1)   
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org   
+=== START OF INFORMATION SECTION ===   
+Device Model:     SanDisk X400 M.2 2280 512GB   
+Serial Number:    1711AD802758   
+LU WWN Device Id: 5 001b44 8b4b77f26   
+Firmware Version: X4130012   
+User Capacity:    512,110,190,592 bytes [512 GB]   
+Sector Size:      512 bytes logical/physical   
+Rotation Rate:    Solid State Device   
+Form Factor:      M.2   
+TRIM Command:     Available, deterministic, zeroed   
+Device is:        Not in smartctl database 7.3/5528   
+ATA Version is:   ACS-2 T13/2015-D revision 3   
+SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)   
+Local Time is:    Mon Jan 06 16:19:11 2025 CST   
+SMART support is: Available - device has SMART capability.   
+SMART support is: Enabled   
+AAM feature is:   Unavailable   
+APM level is:     128 (minimum power consumption without standby)   
+Rd look-ahead is: Enabled   
+Write cache is:   Enabled   
+DSN feature is:   Unavailable   
+ATA Security is:  Disabled, frozen [SEC2], Master PW ID: 0x6ff1   
+Wt Cache Reorder: Enabled   
+=== START OF READ SMART DATA SECTION ===   
+SMART overall-health self-assessment test result: PASSED   
+General SMART Values:   
+Offline data collection status:  (0x00)	Offline data collection activity   
+was never started.   
+Auto Offline Data Collection: Disabled.   
+Self-test execution status:      (   0)	The previous self-test routine completed   
+without error or no self-test has ever    
+been run.   
+Total time to complete Offline    
+data collection: 		(    0) seconds.   
+Offline data collection   
+capabilities: 			 (0x11) SMART execute Offline immediate.   
+No Auto Offline data collection support.   
+Suspend Offline collection upon new   
+command.   
+No Offline surface scan supported.   
+Self-test supported.   
+No Conveyance Self-test supported.   
+No Selective Self-test supported.   
+SMART capabilities:            (0x0003)	Saves SMART data before entering   
+power-saving mode.   
+Supports SMART auto save timer.   
+Error logging capability:        (0x01)	Error logging supported.   
+General Purpose Logging supported.   
+Short self-test routine    
+recommended polling time: 	 (   2) minutes.   
+Extended self-test routine   
+recommended polling time: 	 (  10) minutes.   
+SCT capabilities: 	       (0x003d)	SCT Status supported.   
+SCT Error Recovery Control supported.   
+SCT Feature Control supported.   
+SCT Data Table supported.   
+SMART Attributes Data Structure revision number: 4   
+Vendor Specific SMART Attributes with Thresholds:   
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE   
+5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0   
+9 Power_On_Hours          -O--CK   100   100   ---    -    24737   
+12 Power_Cycle_Count       -O--CK   100   100   ---    -    1893   
+175 Program_Fail_Count_Chip -O--CK   100   100   ---    -    0   
+176 Erase_Fail_Count_Chip   -O--CK   100   100   ---    -    0   
+177 Wear_Leveling_Count     -O--CK   100   100   ---    -    16   
+178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   ---    -    0   
+179 Used_Rsvd_Blk_Cnt_Tot   -O--CK   100   100   ---    -    0   
+180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   004    -    20566   
+181 Program_Fail_Cnt_Total  -O--CK   100   100   ---    -    0   
+182 Erase_Fail_Count_Total  -O--CK   100   100   ---    -    0   
+187 Reported_Uncorrect      -O--CK   100   100   ---    -    0   
+194 Temperature_Celsius     -O---K   056   066   ---    -    44 (Min/Max 14/66)   
+195 Hardware_ECC_Recovered  -O--CK   100   100   ---    -    0   
+199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0   
+230 Unknown_SSD_Attribute   -O--CK   100   100   ---    -    7722386589446   
+238 Unknown_Attribute       -O--CK   093   100   ---    -    15592648   
+241 Total_LBAs_Written      ----CK   253   253   ---    -    36819163509   
+242 Total_LBAs_Read         ----CK   253   253   ---    -    45456787078   
+||||||_ K auto-keep   
+|||||__ C event count   
+||||___ R error rate   
+|||____ S speed/performance   
+||_____ O updated online   
+|______ P prefailure warning   
+General Purpose Log Directory Version 1   
+SMART           Log Directory Version 1 [multi-sector log support]   
+Address    Access  R/W   Size  Description   
+0x00       GPL,SL  R/O      1  Log Directory   
+0x01           SL  R/O      1  Summary SMART error log   
+0x02           SL  R/O      2  Comprehensive SMART error log   
+0x03       GPL     R/O      1  Ext. Comprehensive SMART error log   
+0x04       GPL,SL  R/O      8  Device Statistics log   
+0x06           SL  R/O      1  SMART self-test log   
+0x07       GPL     R/O      1  Extended self-test log   
+0x10       GPL     R/O      1  NCQ Command Error log   
+0x11       GPL     R/O      1  SATA Phy Event Counters log   
+0x30       GPL,SL  R/O      9  IDENTIFY DEVICE data log   
+0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log   
+0xde       GPL     VS       8  Device vendor specific log   
+0xe0       GPL,SL  R/W      1  SCT Command/Status   
+0xe1       GPL,SL  R/W      1  SCT Data Transfer   
+SMART Extended Comprehensive Error Log Version: 1 (1 sectors)   
+No Errors Logged   
+SMART Extended Self-test Log Version: 1 (1 sectors)   
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error   
+# 1  Extended offline    Completed without error       00%     24737         -   
+# 2  Short offline       Completed without error       00%     24737         -   
+# 3  Extended offline    Completed without error       00%     24736         -   
+# 4  Short offline       Completed without error       00%     24736         -   
+# 5  Short offline       Completed without error       00%     24736         -   
+# 6  Short offline       Completed without error       00%     24736         -   
+# 7  Short offline       Completed without error       00%     24736         -   
+# 8  Extended offline    Completed without error       00%     24735         -   
+# 9  Extended offline    Completed without error       00%     24735         -   
+#10  Extended offline    Completed without error       00%     24734         -   
+#11  Short offline       Aborted by host               00%      5366         -   
+#12  Short offline       Completed without error       00%         5         -   
+Selective Self-tests/Logging not supported   
+SCT Status Version:                  3   
+SCT Version (vendor specific):       257 (0x0101)   
+Device State:                        Active (0)   
+Current Temperature:                    44 Celsius   
+Power Cycle Min/Max Temperature:     28/44 Celsius   
+Lifetime    Min/Max Temperature:     28/44 Celsius   
+Specified Max Operating Temperature:    44 Celsius   
+Under/Over Temperature Limit Count:   0/0   
+Vendor specific:   
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   
+01 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00   
+SCT Temperature History Version:     2   
+Temperature Sampling Period:         1 minute   
+Temperature Logging Interval:        1 minute   
+Min/Max recommended Temperature:     -10/70 Celsius   
+Min/Max Temperature Limit:           -15/90 Celsius   
+Temperature History Size (Index):    256 (174)   
+Index    Estimated Time   Temperature Celsius   
+175    2025-01-06 12:04    37  ******************   
+176    2025-01-06 12:05    38  *******************   
+177    2025-01-06 12:06    38  *******************   
+178    2025-01-06 12:07    38  *******************   
+179    2025-01-06 12:08    37  ******************   
+180    2025-01-06 12:09    38  *******************   
+181    2025-01-06 12:10    37  ******************   
+182    2025-01-06 12:11    38  *******************   
+183    2025-01-06 12:12    39  ********************   
+...    ..(  5 skipped).    ..  ********************   
+189    2025-01-06 12:18    39  ********************   
+190    2025-01-06 12:19    40  *********************   
+191    2025-01-06 12:20    38  *******************   
+192    2025-01-06 12:21    39  ********************   
+193    2025-01-06 12:22    40  *********************   
+194    2025-01-06 12:23    40  *********************   
+195    2025-01-06 12:24    39  ********************   
+196    2025-01-06 12:25    40  *********************   
+197    2025-01-06 12:26    40  *********************   
+198    2025-01-06 12:27    41  **********************   
+199    2025-01-06 12:28    42  ***********************   
+...    ..(  3 skipped).    ..  ***********************   
+203    2025-01-06 12:32    42  ***********************   
+204    2025-01-06 12:33    40  *********************   
+205    2025-01-06 12:34    40  *********************   
+206    2025-01-06 12:35    39  ********************   
+207    2025-01-06 12:36    39  ********************   
+208    2025-01-06 12:37    38  *******************   
+209    2025-01-06 12:38    39  ********************   
+210    2025-01-06 12:39    38  *******************   
+...    ..(  2 skipped).    ..  *******************   
+213    2025-01-06 12:42    38  *******************   
+214    2025-01-06 12:43    40  *********************   
+215    2025-01-06 12:44    38  *******************   
+216    2025-01-06 12:45    40  *********************   
+217    2025-01-06 12:46    41  **********************   
+218    2025-01-06 12:47    43  ************************   
+219    2025-01-06 12:48    41  **********************   
+220    2025-01-06 12:49    40  *********************   
+221    2025-01-06 12:50    41  **********************   
+222    2025-01-06 12:51    38  *******************   
+223    2025-01-06 12:52    40  *********************   
+224    2025-01-06 12:53    40  *********************   
+225    2025-01-06 12:54    41  **********************   
+...    ..( 14 skipped).    ..  **********************   
+240    2025-01-06 13:09    41  **********************   
+241    2025-01-06 13:10    31  ************   
+242    2025-01-06 13:11    31  ************   
+243    2025-01-06 13:12    32  *************   
+...    ..(  2 skipped).    ..  *************   
+246    2025-01-06 13:15    32  *************   
+247    2025-01-06 13:16    31  ************   
+248    2025-01-06 13:17    31  ************   
+249    2025-01-06 13:18    33  **************   
+250    2025-01-06 13:19    30  ***********   
+251    2025-01-06 13:20    31  ************   
+252    2025-01-06 13:21    31  ************   
+253    2025-01-06 13:22    31  ************   
+254    2025-01-06 13:23    32  *************   
+255    2025-01-06 13:24    31  ************   
+0    2025-01-06 13:25    31  ************   
+1    2025-01-06 13:26    31  ************   
+2    2025-01-06 13:27    32  *************   
+3    2025-01-06 13:28    31  ************   
+4    2025-01-06 13:29    31  ************   
+5    2025-01-06 13:30    32  *************   
+6    2025-01-06 13:31    31  ************   
+7    2025-01-06 13:32    32  *************   
+8    2025-01-06 13:33    32  *************   
+9    2025-01-06 13:34    31  ************   
+...    ..(  7 skipped).    ..  ************   
+17    2025-01-06 13:42    31  ************   
+18    2025-01-06 13:43    32  *************   
+19    2025-01-06 13:44    31  ************   
+...    ..( 12 skipped).    ..  ************   
+32    2025-01-06 13:57    31  ************   
+33    2025-01-06 13:58    32  *************   
+34    2025-01-06 13:59    31  ************   
+35    2025-01-06 14:00    35  ****************   
+36    2025-01-06 14:01    32  *************   
+37    2025-01-06 14:02    32  *************   
+38    2025-01-06 14:03    33  **************   
+39    2025-01-06 14:04    34  ***************   
+40    2025-01-06 14:05    32  *************   
+41    2025-01-06 14:06    31  ************   
+42    2025-01-06 14:07    43  ************************   
+43    2025-01-06 14:08    32  *************   
+44    2025-01-06 14:09    32  *************   
+45    2025-01-06 14:10    33  **************   
+46    2025-01-06 14:11    33  **************   
+47    2025-01-06 14:12    33  **************   
+48    2025-01-06 14:13    34  ***************   
+49    2025-01-06 14:14    34  ***************   
+50    2025-01-06 14:15    34  ***************   
+51    2025-01-06 14:16    35  ****************   
+52    2025-01-06 14:17    34  ***************   
+...    ..(  3 skipped).    ..  ***************   
+56    2025-01-06 14:21    34  ***************   
+57    2025-01-06 14:22    36  *****************   
+58    2025-01-06 14:23    35  ****************   
+59    2025-01-06 14:24    34  ***************   
+...    ..(  2 skipped).    ..  ***************   
+62    2025-01-06 14:27    34  ***************   
+63    2025-01-06 14:28    35  ****************   
+64    2025-01-06 14:29    35  ****************   
+65    2025-01-06 14:30    36  *****************   
+66    2025-01-06 14:31    35  ****************   
+67    2025-01-06 14:32    36  *****************   
+...    ..(  2 skipped).    ..  *****************   
+70    2025-01-06 14:35    36  *****************   
+71    2025-01-06 14:36    35  ****************   
+72    2025-01-06 14:37    35  ****************   
+73    2025-01-06 14:38    38  *******************   
+74    2025-01-06 14:39    36  *****************   
+75    2025-01-06 14:40    35  ****************   
+76    2025-01-06 14:41    37  ******************   
+77    2025-01-06 14:42    37  ******************   
+78    2025-01-06 14:43    36  *****************   
+79    2025-01-06 14:44    35  ****************   
+80    2025-01-06 14:45    38  *******************   
+81    2025-01-06 14:46    36  *****************   
+82    2025-01-06 14:47    36  *****************   
+83    2025-01-06 14:48    33  **************   
+84    2025-01-06 14:49    38  *******************   
+85    2025-01-06 14:50    42  ***********************   
+86    2025-01-06 14:51    44  *************************   
+87    2025-01-06 14:52    46  ***************************   
+88    2025-01-06 14:53    46  ***************************   
+89    2025-01-06 14:54    47  ****************************   
+90    2025-01-06 14:55    47  ****************************   
+91    2025-01-06 14:56    48  *****************************   
+92    2025-01-06 14:57    49  ******************************   
+93    2025-01-06 14:58    48  *****************************   
+94    2025-01-06 14:59    38  *******************   
+95    2025-01-06 15:00    36  *****************   
+96    2025-01-06 15:01    36  *****************   
+97    2025-01-06 15:02    41  **********************   
+98    2025-01-06 15:03    44  *************************   
+99    2025-01-06 15:04    46  ***************************   
+100    2025-01-06 15:05    47  ****************************   
+101    2025-01-06 15:06    48  *****************************   
+102    2025-01-06 15:07    49  ******************************   
+...    ..(  3 skipped).    ..  ******************************   
+106    2025-01-06 15:11    49  ******************************   
+107    2025-01-06 15:12    42  ***********************   
+108    2025-01-06 15:13    45  **************************   
+109    2025-01-06 15:14    47  ****************************   
+...    ..(  3 skipped).    ..  ****************************   
+113    2025-01-06 15:18    47  ****************************   
+114    2025-01-06 15:19    46  ***************************   
+115    2025-01-06 15:20    46  ***************************   
+116    2025-01-06 15:21    46  ***************************   
+117    2025-01-06 15:22    35  ****************   
+118    2025-01-06 15:23    32  *************   
+119    2025-01-06 15:24    32  *************   
+120    2025-01-06 15:25    32  *************   
+121    2025-01-06 15:26    35  ****************   
+122    2025-01-06 15:27    39  ********************   
+123    2025-01-06 15:28    38  *******************   
+124    2025-01-06 15:29    41  **********************   
+125    2025-01-06 15:30    34  ***************   
+126    2025-01-06 15:31    38  *******************   
+127    2025-01-06 15:32    41  **********************   
+128    2025-01-06 15:33    33  **************   
+129    2025-01-06 15:34    35  ****************   
+130    2025-01-06 15:35    33  **************   
+131    2025-01-06 15:36    39  ********************   
+132    2025-01-06 15:37    34  ***************   
+133    2025-01-06 15:38    38  *******************   
+134    2025-01-06 15:39    41  **********************   
+135    2025-01-06 15:40    39  ********************   
+136    2025-01-06 15:41    36  *****************   
+137    2025-01-06 15:42    41  **********************   
+138    2025-01-06 15:43    43  ************************   
+139    2025-01-06 15:44    44  *************************   
+140    2025-01-06 15:45    45  **************************   
+141    2025-01-06 15:46    46  ***************************   
+142    2025-01-06 15:47    46  ***************************   
+143    2025-01-06 15:48    46  ***************************   
+144    2025-01-06 15:49    47  ****************************   
+145    2025-01-06 15:50    47  ****************************   
+146    2025-01-06 15:51    38  *******************   
+147    2025-01-06 15:52    34  ***************   
+148    2025-01-06 15:53    28  *********   
+149    2025-01-06 15:54    28  *********   
+150    2025-01-06 15:55    29  **********   
+151    2025-01-06 15:56    29  **********   
+152    2025-01-06 15:57    29  **********   
+153    2025-01-06 15:58    30  ***********   
+154    2025-01-06 15:59    31  ************   
+155    2025-01-06 16:00    31  ************   
+156    2025-01-06 16:01    32  *************   
+157    2025-01-06 16:02    32  *************   
+158    2025-01-06 16:03    36  *****************   
+159    2025-01-06 16:04    38  *******************   
+160    2025-01-06 16:05    33  **************   
+161    2025-01-06 16:06    33  **************   
+162    2025-01-06 16:07    35  ****************   
+163    2025-01-06 16:08    35  ****************   
+164    2025-01-06 16:09    32  *************   
+165    2025-01-06 16:10    34  ***************   
+166    2025-01-06 16:11    36  *****************   
+167    2025-01-06 16:12    39  ********************   
+168    2025-01-06 16:13    40  *********************   
+169    2025-01-06 16:14    41  **********************   
+170    2025-01-06 16:15    42  ***********************   
+171    2025-01-06 16:16    43  ************************   
+172    2025-01-06 16:17    43  ************************   
+173    2025-01-06 16:18    44  *************************   
+174    2025-01-06 16:19    44  *************************   
+SCT Error Recovery Control:   
+Read: Disabled   
+Write: Disabled   
+Device Statistics (GP Log 0x04)   
+Page  Offset Size        Value Flags Description   
+0x01  =====  =               =  ===  == General Statistics (rev 1) ==   
+0x01  0x008  4            1893  ---  Lifetime Power-On Resets   
+0x01  0x010  4            2411  ---  Power-on Hours   
+0x01  0x018  6     36819163509  ---  Logical Sectors Written   
+0x01  0x020  6       989099692  ---  Number of Write Commands   
+0x01  0x028  6     45456787078  ---  Logical Sectors Read   
+0x01  0x030  6      1127494697  ---  Number of Read Commands   
+0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==   
+0x07  0x008  1               2  N--  Percentage Used Endurance Indicator   
+|||_ C monitored condition met   
+||__ D supports DSN   
+|___ N normalized value   
+Pending Defects log (GP Log 0x0c) not supported   
+SATA Phy Event Counters (GP Log 0x11)   
+ID      Size     Value  Description   
+0x0001  4            0  Command failed due to ICRC error   
+0x0002  4            0  R_ERR response for data FIS   
+0x0005  4            0  R_ERR response for non-data FIS   
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET   
+#######################################################  
+#######################################################  
+#######################################################  
+#######################################################  
+Mon 01/06/2025 16:19:12.30 DONE  
