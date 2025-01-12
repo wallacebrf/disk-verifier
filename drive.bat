@@ -17,10 +17,10 @@ REM 8.) launch the script as administrator by right clicking the file and "run a
 
 rem USER VARIABLES
 REM set this variable to be the number of bytes the video file to be copied. 
-Set movie_size=156750742
+Set movie_size=85623128064
 set results_file="C:\Users\%USERNAME%\Desktop\results_%start_date%.md5"
-set video_file_location="C:\video\movie.exe"
-set video_file_crc32_value=2517E216
+set video_file_location="C:\video\movie.mkv"
+set video_file_crc32_value=E6242C96
 set log_file="C:\Users\%USERNAME%\Desktop\log_%start_date%.txt"
 
 
@@ -135,10 +135,10 @@ for /f "tokens=*" %%O in ('smartctl -x %drive_letter%:\ ^| find /i "SMART overal
 REM Perform quick SMART test
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing quick SMART test on Drive "%drive_letter%:" >																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 1 of 7) Performing quick SMART test on Drive "%drive_letter%:" >																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-
+title (Step 1 of 7) Performing quick SMART test on Drive "%drive_letter%:"
 smartctl -t short %drive_letter%: >																																						%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo waiting 60 seconds to poll status again >																																			%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 timeout /t 60 > nul
@@ -167,22 +167,22 @@ for /f "tokens=*" %%O in ('smartctl -x %drive_letter%:\ ^| find /i "% of test"')
 REM performing a full disk format
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing full format of drive "%drive_letter%:" using command "FORMAT %drive_letter%: /FS:NTFS /P:1 /X" >															%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 2 of 7) Performing full format of drive "%drive_letter%:" using command "FORMAT %drive_letter%: /FS:NTFS /P:1 /X" >															%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/FS:NTFS" -- Formatting file system as NTFS >																																		%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/P:1" --  Zero every sector on the volume.  After that, the volume will be overwritten "1" times using a different random number each time. >										%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/X" -- Forces the volume to dismount first if necessary. >																														%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-title Performing full format of drive %drive_letter%:
+title (Step 2 of 7) Performing full format of drive %drive_letter%:
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 FORMAT %drive_letter%: /FS:NTFS /P:1 /X
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Copying 100,000 copies of file "%video_file_location%" to disk "%drive_letter%:" or until the drive is full whichever occurs first >									%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 3 of 7) Copying 100,000 copies of file "%video_file_location%" to disk "%drive_letter%:" or until the drive is full whichever occurs first >									%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-title Copying file to disk %drive_letter%
+title (Step 3 of 7) Copying files to disk %drive_letter%
 
 for /l %%A in (1,1,100000) do (
 	echo %date% %time% Processing file number %%A on Drive "%drive_letter%:" >																											%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
@@ -225,8 +225,11 @@ for /f "tokens=*" %%O in ('smartctl -x %drive_letter%:\ ^| find /i "SMART overal
 		)
 	) > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing CRC Check of files copied to Drive "%drive_letter%:" >																									%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-title Performing CRC Check of files copied to Drive "%drive_letter%:"
+echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 4 of 7) Performing CRC Check of files copied to Drive "%drive_letter%:" >																									%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+title (Step 4 of 7) Performing CRC Check of files copied to Drive "%drive_letter%:"
 echo command is exf -c %results_file% -mt 16 -d "%drive_letter%:\" > 																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 exf -c %results_file% -mt 16 -d "%drive_letter%:\" > 																																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
@@ -264,13 +267,13 @@ for /f "tokens=*" %%O in ('smartctl -x %drive_letter%:\ ^| find /i "SMART overal
 
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing full Check Disk of %drive_letter% using commnd chkdsk %drive_letter%: /f /r /x >																			%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 5 of 7) Performing full Check Disk of %drive_letter% using commnd chkdsk %drive_letter%: /f /r /x >																			%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/F" -- Fixes errors on the disk. >																																				%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/R" -- Locates bad sectors and recovers readable information >																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/X" -- Forces the volume to dismount first if necessary. >																														%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-title Performing full Check Disk of Drive "%drive_letter%:"
+title (Step 5 of 7) Performing full Check Disk of Drive "%drive_letter%:"
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 chkdsk %drive_letter%: /f /r /x
 
@@ -297,12 +300,12 @@ for /f "tokens=*" %%O in ('smartctl -x %drive_letter%:\ ^| find /i "SMART overal
 REM performing a quick disk format
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- > 																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing quick format of drive "%drive_letter%:" using command "FORMAT %drive_letter%: /FS:NTFS /Q" > 																%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 6 of 7) Performing quick format of drive "%drive_letter%:" using command "FORMAT %drive_letter%: /FS:NTFS /Q" > 																%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/FS:NTFS" -- Formatting file system as NTFS >																																		%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo "/Q" --  Quick Format >																																							%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-title Performing quick format of drive %drive_letter%:
+title (Step 6 of 7) Performing quick format of drive %drive_letter%:
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 FORMAT %drive_letter%: /FS:NTFS /Q
 
@@ -312,9 +315,10 @@ FORMAT %drive_letter%: /FS:NTFS /Q
 REM Start extended smart test on Disk
 echo. > 																																												%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
-echo %date% %time% Performing Extended SMART test on Drive "%drive_letter%:" >																											%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+echo %date% %time% (Step 7 of 7) Performing Extended SMART test on Drive "%drive_letter%:" >																											%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo --------------------------------------------------------------------------------------------------------------- >																	%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 echo. >																																													%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
+title (Step 7 of 7) Performing Extended SMART test on Drive "%drive_letter%:"
 smartctl -t long %drive_letter%:
 echo waiting 60 seconds to poll status again > 																																			%tmp_file% && type %tmp_file% && type %tmp_file% >> %log_file%
 timeout /t 60 > nul
